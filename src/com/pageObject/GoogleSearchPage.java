@@ -1,5 +1,6 @@
 /**
  * Created by rajivbhati on 10/27/16.
+ * @description: Page Obejct class extended from BasePage for Google.com
  */
 package com.pageObject;
 import org.openqa.selenium.WebDriver;

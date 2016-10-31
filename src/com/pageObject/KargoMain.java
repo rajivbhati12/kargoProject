@@ -1,12 +1,12 @@
 /**
  * Created by rajivbhati on 10/27/16.
+ * @description: Page Object class extended from BasePage for Kargo.com
  */
 package com.pageObject;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import static java.util.concurrent.TimeUnit.SECONDS;
-
 
 public class KargoMain extends BasePage{
 
@@ -25,8 +25,8 @@ public class KargoMain extends BasePage{
     }
 
     public void ClickAbout(){
-        navBtn.click();
-        aboutUs.click();
+        clickMe(navBtn);
+        clickMe(aboutUs);
     }
 
     public String getHeroContent(){
