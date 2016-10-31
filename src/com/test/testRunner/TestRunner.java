@@ -12,7 +12,12 @@ import org.junit.runner.Result;
 public class TestRunner {
     public static void main(String[] args) {
         ResourcePath dp = ResourcePath.getInstance();
-        dp.setPath((args[0]).toString());
+        try{
+            dp.setPath((args[0]).toString());
+        }catch (Exception e){
+            e.printStackTrace();
+            dp.setPath(System.getProperty("user.dir") + "/src/resources");
+        }
         Result result = JUnitCore.runClasses(WhenAUserSearchesOnGoogle.class);
         for (Failure failure : result.getFailures()) {
             System.out.println(failure.toString());
